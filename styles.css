@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --ink: #f6f1e8;
   --muted: #b9afa4;
   --paper: #120f14;
@@ -839,42 +839,42 @@ a {
 .shop-various .shop-action-links .action-card {
   background-image:
     linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.62)),
-    url("assets/action-buttons/action-various.png");
+    url("assets/action-buttons/action-various.jpg");
   background-size: 300% 100%;
 }
 
 .shop-solomon .shop-action-links .action-card {
   background-image:
     linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(95, 35, 72, 0.52)),
-    url("assets/action-buttons/action-solomon.png");
+    url("assets/action-buttons/action-solomon.jpg");
   background-size: 300% 100%;
 }
 
 .shop-lively .shop-action-links .action-card {
   background-image:
     linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.62)),
-    url("assets/action-buttons/action-lively.png");
+    url("assets/action-buttons/action-lively.jpg");
   background-size: 300% 100%;
 }
 
 .shop-charme .shop-action-links .action-card {
   background-image:
     linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(38, 11, 51, 0.62)),
-    url("assets/action-buttons/action-charme.png");
+    url("assets/action-buttons/action-charme.jpg");
   background-size: 300% 100%;
 }
 
 .shop-strive .shop-action-links .action-card {
   background-image:
     linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(4, 13, 24, 0.62)),
-    url("assets/action-buttons/action-strive.png");
+    url("assets/action-buttons/action-strive.jpg");
   background-size: 300% 100%;
 }
 
 .shop-ebichanchi .shop-action-links .action-card {
   background-image:
     linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(70, 20, 12, 0.54)),
-    url("assets/action-buttons/action-ebichanchi.png");
+    url("assets/action-buttons/action-ebichanchi.jpg");
   background-size: 300% 100%;
 }
 
@@ -979,6 +979,14 @@ a {
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02)),
     linear-gradient(135deg, var(--shop-a), var(--shop-b));
+}
+
+.cast-image-slot img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  display: block;
+  object-fit: cover;
 }
 
 .cast-profile:not(.manager) .cast-image-slot {
@@ -1534,3 +1542,4 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
