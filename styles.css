@@ -777,8 +777,10 @@ a {
   padding: 16px;
   color: var(--ink);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.14)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.54)),
     linear-gradient(135deg, var(--shop-a), var(--shop-b));
+  background-position: center;
+  background-size: cover;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
   box-shadow: 0 16px 42px rgba(0, 0, 0, 0.32);
@@ -823,21 +825,57 @@ a {
 }
 
 .shop-action-links .webshop {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.2)),
-    linear-gradient(135deg, #2c1b23, #d8ad62);
+  background-position: 0% 50%;
 }
 
 .shop-action-links .recruit {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.2)),
-    linear-gradient(135deg, #182336, #3aa7d5);
+  background-position: 50% 50%;
 }
 
 .shop-action-links .cast {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.2)),
-    linear-gradient(135deg, #211426, #a63f54);
+  background-position: 100% 50%;
+}
+
+.shop-various .shop-action-links .action-card {
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.62)),
+    url("assets/action-buttons/action-various.png");
+  background-size: 300% 100%;
+}
+
+.shop-solomon .shop-action-links .action-card {
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(95, 35, 72, 0.52)),
+    url("assets/action-buttons/action-solomon.png");
+  background-size: 300% 100%;
+}
+
+.shop-lively .shop-action-links .action-card {
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.62)),
+    url("assets/action-buttons/action-lively.png");
+  background-size: 300% 100%;
+}
+
+.shop-charme .shop-action-links .action-card {
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(38, 11, 51, 0.62)),
+    url("assets/action-buttons/action-charme.png");
+  background-size: 300% 100%;
+}
+
+.shop-strive .shop-action-links .action-card {
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(4, 13, 24, 0.62)),
+    url("assets/action-buttons/action-strive.png");
+  background-size: 300% 100%;
+}
+
+.shop-ebichanchi .shop-action-links .action-card {
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(70, 20, 12, 0.54)),
+    url("assets/action-buttons/action-ebichanchi.png");
+  background-size: 300% 100%;
 }
 
 .shop-news,
