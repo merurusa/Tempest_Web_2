@@ -13,6 +13,7 @@
   };
   const escapeHtml = (value) => String(value || '').replace(/[&<>"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[char]));
   const getImage = (shopId, cast) => cast.image || data.shops[shopId].placeholder;
+  const imageFallback = (shopId) => ` onerror="this.onerror=null;this.src='${escapeHtml(data.shops[shopId].placeholder)}';"`;
   const profileUrl = (shopId, castId) => `cast-profile.html?shop=${encodeURIComponent(shopId)}&id=${encodeURIComponent(castId)}`;
 
   function renderCastList(root) {
@@ -33,7 +34,7 @@
       const emptyClass = cast.available ? '' : ' is-empty';
       return `
         <a class="${cardClass}${emptyClass}" href="${profileUrl(shopId, cast.id)}" aria-label="${escapeHtml(cast.name)}の個人ページへ">
-          <div class="cast-image-slot"><img src="${escapeHtml(getImage(shopId, cast))}" alt="${escapeHtml(cast.name)}"></div>
+          <div class="cast-image-slot"><img src="${escapeHtml(getImage(shopId, cast))}" alt="${escapeHtml(cast.name)}"${imageFallback(shopId)}></div>
           <div class="cast-profile-body">
             <p class="eyebrow">${escapeHtml(cast.role)}</p>
             <h2>${escapeHtml(cast.name)}</h2>
@@ -69,7 +70,7 @@
 
     root.innerHTML = `
       <section class="cast-detail${cast.available ? '' : ' is-empty'}">
-        <div class="cast-detail-image"><img src="${escapeHtml(getImage(shopId, cast))}" alt="${escapeHtml(cast.name)}"></div>
+        <div class="cast-detail-image"><img src="${escapeHtml(getImage(shopId, cast))}" alt="${escapeHtml(cast.name)}"${imageFallback(shopId)}></div>
         <div class="cast-detail-body">
           <p class="eyebrow">${escapeHtml(shop.name)} / ${escapeHtml(cast.role)}</p>
           <h1>${escapeHtml(cast.name)}</h1>
@@ -82,4 +83,5 @@
   document.querySelectorAll('[data-cast-list]').forEach(renderCastList);
   document.querySelectorAll('[data-cast-profile]').forEach(renderCastProfile);
 }());
+
 
