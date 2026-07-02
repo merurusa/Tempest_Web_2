@@ -12,8 +12,13 @@
     ebichanchi: { a: '#fff2d8', b: '#e2472f', logoA: '#fff0c7', logoB: '#e2472f' }
   };
   const escapeHtml = (value) => String(value || '').replace(/[&<>"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[char]));
+  const inlineFallback = (shopId) => {
+    const colors = shopStyles[shopId] || shopStyles.various;
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${colors.a}"/><stop offset="1" stop-color="${colors.b}"/></linearGradient></defs><rect width="900" height="1200" fill="url(#g)"/><rect x="46" y="46" width="808" height="1108" fill="none" stroke="${colors.logoA}" stroke-opacity=".45" stroke-width="4"/><rect x="76" y="76" width="748" height="1048" fill="none" stroke="${colors.logoA}" stroke-opacity=".32" stroke-width="4"/><text x="450" y="610" text-anchor="middle" font-family="Georgia,serif" font-size="280" font-weight="700" fill="${colors.logoA}">?</text><text x="450" y="760" text-anchor="middle" font-family="Arial,sans-serif" font-size="46" font-weight="700" fill="${colors.logoA}">Comming soon</text></svg>`;
+    return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+  };
   const getImage = (shopId, cast) => cast.image || data.shops[shopId].placeholder;
-  const imageFallback = (shopId) => ` onerror="this.onerror=null;this.src='${escapeHtml(data.shops[shopId].placeholder)}';"`;
+  const imageFallback = (shopId) => ` onerror="this.onerror=null;this.src='${inlineFallback(shopId)}';"`;
   const profileUrl = (shopId, castId) => `cast-profile.html?shop=${encodeURIComponent(shopId)}&id=${encodeURIComponent(castId)}`;
 
   function renderCastList(root) {
@@ -83,5 +88,6 @@
   document.querySelectorAll('[data-cast-list]').forEach(renderCastList);
   document.querySelectorAll('[data-cast-profile]').forEach(renderCastProfile);
 }());
+
 
 
