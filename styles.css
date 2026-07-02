@@ -18,6 +18,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -29,6 +30,7 @@ body {
     linear-gradient(180deg, #151019 0%, #120f14 45%, #19151a 100%);
   line-height: 1.65;
   padding-bottom: 74px;
+  overflow-x: hidden;
 }
 
 a {
@@ -1401,7 +1403,7 @@ a {
   }
 
   .shop-banner {
-    min-height: 132px;
+    min-height: 124px;
   }
 
   .shop-banner::after {
@@ -1415,11 +1417,12 @@ a {
   }
 
   .shop-banner-text strong {
-    font-size: 23px;
+    font-size: 21px;
+    overflow-wrap: anywhere;
   }
 
   .shop-banner.ebichan .shop-banner-text strong {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .shop-banner-text small {
@@ -1463,14 +1466,14 @@ a {
 @media (max-width: 520px) {
   .shop-page .shop-action-links {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    width: calc(100% - 16px);
-    gap: 8px;
+    width: calc(100% - 12px);
+    gap: 6px;
     margin-top: 14px;
   }
 
   .shop-page .shop-action-links .action-card {
-    min-height: 92px;
-    padding: 11px 8px;
+    min-height: 88px;
+    padding: 10px 6px;
   }
 
   .shop-page .shop-action-links .action-card::before {
@@ -1478,11 +1481,12 @@ a {
   }
 
   .shop-page .shop-action-links .action-card span {
-    font-size: 16px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
   }
 
   .shop-page .shop-action-links .action-card small {
-    font-size: 9px;
+    font-size: 8px;
     line-height: 1.25;
   }
 
@@ -1538,8 +1542,18 @@ a {
 }
 
 @media (max-width: 340px) {
+  .top-shop-grid,
+  .shop-page .shop-action-links {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-page .shop-action-links .action-card {
+    min-height: 104px;
+  }
+
   .cast-list {
     grid-template-columns: 1fr;
   }
 }
+
 
