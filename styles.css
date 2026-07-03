@@ -1727,3 +1727,20 @@ a {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+.cast-profile.manager .eyebrow { font-size: 12px; }
+.cast-profile.manager .cast-profile-body h2 { font-size: 24px; }
+@media (max-width: 520px) { .cast-profile.manager .cast-profile-body h2 { font-size: 18px; } }
+
+

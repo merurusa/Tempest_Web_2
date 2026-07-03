@@ -20,6 +20,7 @@
   const getImage = (shopId, cast) => cast.image || data.shops[shopId].placeholder;
   const imageFallback = (shopId) => ` onerror="this.onerror=null;this.src='${inlineFallback(shopId)}';"`;
   const profileUrl = (shopId, castId) => `cast-profile.html?shop=${encodeURIComponent(shopId)}&id=${encodeURIComponent(castId)}`;
+  const displayRole = (role) => ({ Manager: '店長', Leader: 'リーダー' }[role] || role);
 
   function renderCastList(root) {
     const shopId = root.dataset.shop;
@@ -34,14 +35,14 @@
     if (eyebrow) eyebrow.textContent = shop.name;
 
     root.innerHTML = casts.map((cast, index) => {
-      const isManager = index === 0;
+      const isManager = cast.role === 'Manager' || cast.role === 'Leader';
       const cardClass = isManager ? 'cast-profile manager' : 'cast-profile';
       const emptyClass = cast.available ? '' : ' is-empty';
       return `
         <a class="${cardClass}${emptyClass}" href="${profileUrl(shopId, cast.id)}" aria-label="${escapeHtml(cast.name)}の個人ページへ">
           <div class="cast-image-slot"><img src="${escapeHtml(getImage(shopId, cast))}" alt="${escapeHtml(cast.name)}"${imageFallback(shopId)}></div>
           <div class="cast-profile-body">
-            <p class="eyebrow">${escapeHtml(cast.role)}</p>
+            <p class="eyebrow">${escapeHtml(displayRole(cast.role))}</p>
             <h2>${escapeHtml(cast.name)}</h2>
             <p>${cast.available ? 'プロフィール準備中' : '空き枠'}</p>
           </div>
@@ -77,7 +78,7 @@
       <section class="cast-detail${cast.available ? '' : ' is-empty'}">
         <div class="cast-detail-image"><img src="${escapeHtml(getImage(shopId, cast))}" alt="${escapeHtml(cast.name)}"${imageFallback(shopId)}></div>
         <div class="cast-detail-body">
-          <p class="eyebrow">${escapeHtml(shop.name)} / ${escapeHtml(cast.role)}</p>
+          <p class="eyebrow">${escapeHtml(shop.name)} / ${escapeHtml(displayRole(cast.role))}</p>
           <h1>${escapeHtml(cast.name)}</h1>
           <p>${cast.available ? '個人紹介ページの本文をここに追加できます。' : '現在準備中の空き枠です。'}</p>
           <div class="cast-detail-actions"><a class="button primary" href="${escapeHtml(shop.castPage)}">Cast一覧へ</a><a class="button secondary" href="${escapeHtml(shop.page)}">店舗ページへ</a></div>
@@ -88,6 +89,21 @@
   document.querySelectorAll('[data-cast-list]').forEach(renderCastList);
   document.querySelectorAll('[data-cast-profile]').forEach(renderCastProfile);
 }());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
