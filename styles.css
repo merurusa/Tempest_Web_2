@@ -826,58 +826,80 @@ a {
   font-weight: 800;
 }
 
-.shop-action-links .webshop {
-  background-position: 0% 50%;
+.shop-action-links .action-card {
+  background-size: cover;
 }
 
-.shop-action-links .recruit {
-  background-position: 50% 50%;
+.shop-various .shop-action-links .recruit {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.62)), url("assets/action-buttons/Various_actionUI_01.jpg");
 }
 
-.shop-action-links .cast {
-  background-position: 100% 50%;
+.shop-various .shop-action-links .webshop {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.62)), url("assets/action-buttons/Various_actionUI_02.jpg");
 }
 
-.shop-various .shop-action-links .action-card {
-  background-image:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.62)),
-    url("assets/action-buttons/action-various.png");
-  background-size: 300% 100%;
+.shop-various .shop-action-links .cast {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.62)), url("assets/action-buttons/Various_actionUI_03.jpg");
 }
 
-.shop-solomon .shop-action-links .action-card {
-  background-image:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(95, 35, 72, 0.52)),
-    url("assets/action-buttons/action-solomon.png");
-  background-size: 300% 100%;
+.shop-solomon .shop-action-links .recruit {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(95, 35, 72, 0.52)), url("assets/action-buttons/Solomon_actionUI_01.jpg");
 }
 
-.shop-lively .shop-action-links .action-card {
-  background-image:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.62)),
-    url("assets/action-buttons/action-lively.png");
-  background-size: 300% 100%;
+.shop-solomon .shop-action-links .webshop {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(95, 35, 72, 0.52)), url("assets/action-buttons/Solomon_actionUI_02.jpg");
 }
 
-.shop-charme .shop-action-links .action-card {
-  background-image:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(38, 11, 51, 0.62)),
-    url("assets/action-buttons/action-charme.png");
-  background-size: 300% 100%;
+.shop-solomon .shop-action-links .cast {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(95, 35, 72, 0.52)), url("assets/action-buttons/Solomon_actionUI_03.jpg");
 }
 
-.shop-strive .shop-action-links .action-card {
-  background-image:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(4, 13, 24, 0.62)),
-    url("assets/action-buttons/action-strive.png");
-  background-size: 300% 100%;
+.shop-lively .shop-action-links .recruit {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.62)), url("assets/action-buttons/Lively_actionUI_01.jpg");
 }
 
-.shop-ebichanchi .shop-action-links .action-card {
-  background-image:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(70, 20, 12, 0.54)),
-    url("assets/action-buttons/action-ebichanchi.png");
-  background-size: 300% 100%;
+.shop-lively .shop-action-links .webshop {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.62)), url("assets/action-buttons/Lively_actionUI_02.jpg");
+}
+
+.shop-lively .shop-action-links .cast {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.62)), url("assets/action-buttons/Lively_actionUI_03.jpg");
+}
+
+.shop-charme .shop-action-links .recruit {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(38, 11, 51, 0.62)), url("assets/action-buttons/Charme_actionUI_01.jpg");
+}
+
+.shop-charme .shop-action-links .webshop {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(38, 11, 51, 0.62)), url("assets/action-buttons/Charme_actionUI_02.jpg");
+}
+
+.shop-charme .shop-action-links .cast {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(38, 11, 51, 0.62)), url("assets/action-buttons/Charme_actionUI_03.jpg");
+}
+
+.shop-strive .shop-action-links .recruit {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(4, 13, 24, 0.62)), url("assets/action-buttons/Strive_actionUI_01.jpg");
+}
+
+.shop-strive .shop-action-links .webshop {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(4, 13, 24, 0.62)), url("assets/action-buttons/Strive_actionUI_02.jpg");
+}
+
+.shop-strive .shop-action-links .cast {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(4, 13, 24, 0.62)), url("assets/action-buttons/Strive_actionUI_03.jpg");
+}
+
+.shop-ebichanchi .shop-action-links .recruit {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(70, 20, 12, 0.54)), url("assets/action-buttons/Ebichanchi_actionUI_01.jpg");
+}
+
+.shop-ebichanchi .shop-action-links .webshop {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(70, 20, 12, 0.54)), url("assets/action-buttons/Ebichanchi_actionUI_02.jpg");
+}
+
+.shop-ebichanchi .shop-action-links .cast {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(70, 20, 12, 0.54)), url("assets/action-buttons/Ebichanchi_actionUI_03.jpg");
 }
 
 .shop-news,
@@ -1742,5 +1764,7 @@ a {
 .cast-profile.manager .eyebrow { font-size: 12px; }
 .cast-profile.manager .cast-profile-body h2 { font-size: 24px; }
 @media (max-width: 520px) { .cast-profile.manager .cast-profile-body h2 { font-size: 18px; } }
+
+
 
 
